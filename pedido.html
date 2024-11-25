@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="pedidos.js"></script>
+    <title>Lanches</title>
+</head>
+<body>
+    <header class="header">
+        <header class="header">
+            <div class="background-image"></div>
+            <div class="container">
+                <div class="logo-ped">
+                    <img src="Assets/Logo Clara 2 pg.png" alt="Logo">
+                </div>
+            </div>
+        </header>
+    </header>
+    <main class="main-content">
+        <div class="table-container">
+            <h2>Escolha dos Lanches</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lanche</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>X-PICANHA</td>
+                        <td><input type="number" value="0" min="0"></td>
+                    </tr>
+                    <tr>
+                        <td>X-BACON</td>
+                        <td><input type="number" value="0" min="0"></td>
+                    </tr>
+                    <td>X-SALADA</td>
+                    <td><input type="number" value="0" min="0"></td>
+                    </tr>
+                    <td>COXINHA DE FRANGO</td>
+                    <td><input type="number" value="0" min="0"></td>
+                    </tr>
+                    <td>COMBO 2 X-PICANHA</td>
+                    <td><input type="number" value="0" min="0"></td>
+                    </tr>
+                    <td>COMBO 3 X-PICANHA</td>
+                    <td><input type="number" value="0" min="0"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="button-container">
+            <a class="order-button" href="finalizar.html" target="_blank">Fazer Pedido</a>
+        </div>
+    </main>
+    <footer class="footer">
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="Assets/Logo Clara 2 pg.png" alt="Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="somos.html" class="footer-button">Quem Somos</a>
+                    <a href="#contato" class="footer-button">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/gabriel.redbyte/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/br.estacio?locale=pt_BR" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-credit">
+                Desenvolvido por: Gabriel Lucas Alves Teixeira - mat. 2023.0307.5812 - Curso de ADS. Estácio GO
+            </div>
+        </footer>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        
+        function fazerPedido() {
+            const quantities = document.querySelectorAll('.quantity');
+            const pedidos = [];
+
+            quantities.forEach(quantity => {
+                const qty = parseInt(quantity.value);
+                const name = quantity.getAttribute('data-name');
+                if (qty > 0) {
+                    pedidos.push({ name, qty });
+                }
+            });
+
+            localStorage.setItem('pedidos', JSON.stringify(pedidos));
+            window.location.href = 'confirmacao.html';
+        }
+    </script>
+</body>
+</html>

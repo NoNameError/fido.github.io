@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+}
+
+body {
+    background-color: #e6e6e6;
+    color: #0f0f0f;
+    font-family: Arial, sans-serif;
+    
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 300px; /* Ajuste conforme necessário */
+    overflow: hidden;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+.logo img {
+    max-height: 350px; 
+}
+
+.logo-ped {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.phone .phone-button {
+    display: inline-block;
+    padding: 30px 30px;
+    font-size: 16px;
+    color: #1f1f1f;
+    background-color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.phone .phone-button:hover {
+    background-color: #d4e20c;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.photo-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.button-container {
+    text-align: center;
+}
+.header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.616), #000000), url("Assets/grilled-juicy-steak-cooking-fire-created-with-generative-ai-technology.jpg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+}
+.order-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0e0e0e;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #d4e20c;
+}
+
+.map-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #1f1f1f; 
+    padding: 20px 0; 
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.footer-logo img {
+    max-height: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px; 
+    margin-bottom: 30px;
+}
+
+.footer-button {
+    color: #e2ff57;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-button:hover {
+    color: #e6e6e6;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px; 
+}
+
+.footer-social a {
+    color: #e2ff57;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #e6e6e6;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+table td input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#fazer-pedido-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#fazer-pedido-button:hover {
+    background-color: #e2ff57;
+}
+
+.confirmation-message {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-message h2 {
+    margin-bottom: 20px;
+}
+
+.confirmation-message p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+}
+
+.svg-container img {
+    max-width: 750px; 
+    height: auto;
+}
+
+.footer {
+    background-color: #1f1f1f;
+    padding: 20px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    max-height: 150px;
+}
+
+.footer-links {
+    display: center;
+    gap: 20px;
+}
+
+.footer-button {
+    color: #e2ff57;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-button:hover {
+    color: #e6e6e6;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: #e2ff57;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #e6e6e6;
+}
+
+.footer-credit {
+    text-align: center;
+    font-size: 14px;
+    color: #e2ff57; 
+    padding: 10px 0;
+    margin-top: 20px;
+    
+}
+.quem-somos-section {
+    max-width: 800px; /* Define a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+    padding: 40px; /* Adiciona um espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.quem-somos-section h1 {
+    font-size: 32px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+.quem-somos-section p {
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    line-height: 1.6; /* Espaçamento entre linhas do parágrafo */
+}
